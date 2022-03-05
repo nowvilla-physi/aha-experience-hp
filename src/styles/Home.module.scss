@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+@import "variables.scss";
+@import "breakpoints.scss";
+@import "mixin.scss";
+
+.home {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    &__title {
+        padding: 4px;
+        font-size: 2.8rem;
+
+        @include mq(sm) {
+            font-size: 1.4rem;
+        }
+
+        span {
+            padding-right: 8px;
+            color: $mainColor;
+            font-size: 4.0rem;
+            font-weight: bold;
+
+            @include mq(sm) {
+                padding-right: 4px;
+                font-size: 2.0rem;
+            }
+        }
+    }
+
+    &__subtitle {
+        display: inline-block;
+        margin: 40px 0;
+        border-bottom: 4px solid $demonColor;
+        color: $advancedColor;
+        font-size: 2.4rem;
+
+        @include mq(sm) {
+            border-bottom: 2px solid $demonColor;
+            font-size: 1.2rem;
+        }
+    }
+
+    &__badges {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+
+        @include mq(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__section {
+        margin-top: 64px;
+        padding: 0 4%;
+
+        @include mq(sm) {
+            margin-top: 48px;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+            font-size: 2.0rem;
+            color: $beginnerColor;
+
+            @include mq(sm) {
+                font-size: 1.6rem;
+            }
+        }
+
+        &-text {
+            margin-top: 16px;
+            letter-spacing: 2px;
+            line-height: 1.6;
+
+            @include mq(lg) {
+                text-align: left;
+            }
+
+            @include mq(sm) {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
